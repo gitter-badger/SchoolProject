@@ -4,4 +4,4 @@ This is a python project that aims to emulate a proper Library through a CLI-bas
 
 Currently fulfilled targets:
 
-- [x] Read large-ish data from a JSON file - added in @f873748)
+- [x] Read large-ish data from a JSON file - added in MSF-Jarvis@f873748)
