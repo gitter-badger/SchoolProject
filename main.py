@@ -49,8 +49,8 @@ class Library():					#The main class
             print "No books present in config! This is an error..."
             sleep(0.5)
             quit()
-        filename2 = raw_input("Enter filename for issuers dictionary of format \"name\":[book1,book2,...] default filename is issuers.json...)"
-        if filename2 == '' :
+        filename2 = raw_input("Enter filename for issuers dictionary of format \"name\":[book1,book2,...] default filename is issuers.json...")
+        if filename2 == None :
             filename2 = 'issuers.json'
         self.issuers = load_config(filename2)
         if self.issuers == False:
