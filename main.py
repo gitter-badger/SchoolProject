@@ -40,7 +40,6 @@ class Library():					#The main class
 
     def readdata(self):				#As it's name says, reads the data into our variables
         self.libraryname = raw_input("Enter name of the Library...")
-        self.booknum = int(raw_input("Enter total number of books associated with the Library..."))
         filename1 = raw_input("Enter filename to load book names from (default := books.json )...")
         if filename1 == '' :
             filename1 = 'books.json'
