@@ -1,3 +1,4 @@
+#! /usr/bin/python      #Linux specific requirement
 from time import sleep	#for waiting times between functions
 import json				#for backend
 
@@ -62,5 +63,5 @@ class Library():					#The main class
 
 
 
-        
+
 e = Library()
