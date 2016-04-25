@@ -1,4 +1,4 @@
-#! /usr/bin/python      #Linux specific requirement
+#! /usr/bin/python
 from time import sleep	#for waiting times between functions
 import json				#for backend
 
