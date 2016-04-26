@@ -57,6 +57,16 @@ class Library():					#The main class
         for i in self.issuers.keys:
             self.booksissued.append(i)
 
+# So now, we have gathered values for the libraryname, books, issuers, and the name of the books currently issued.
+# Let's setup an administration section now
 
+	def admin(self):
+		print "Select function"
+		print "1. Add books"
+		print "2. Remove books"
+		print "3. Issue book(s)"
+		print "4. Marks books as returned"
+		print "5. Add records for more students"
+		_choice = int(raw_input("Enter the number of your choice..."))
 
 e = Library()
