@@ -49,10 +49,8 @@ class Library():					#The main class
         if filename2 == None :
             filename2 = 'issuers.json'
         self.issuers = load_config(filename2)
-        for i in self.issuers.values:
+        for i in self.issuers.keys:
             self.booksissued.append(i)
-        print "Issued books list generated successfully..."
-
 
 
 
