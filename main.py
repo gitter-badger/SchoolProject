@@ -31,7 +31,7 @@ class Library():					#The main class
     def __init__(self):				#The variables get initialised here
         self.libraryname = ''
         self.booknum = 0
-        self.books = []
+        self.books = {}
         self.issuers = {}
         self.booksissued = []
         print 'Library initialised...'
@@ -44,7 +44,12 @@ class Library():					#The main class
         filename1 = raw_input("Enter filename to load book names from (default := books.json )...")
         if filename1 == '' :
             filename1 = 'books.json'
-        self.books = load_config(filename1)
+        temp = load_config(filename1)
+
+        for i in temp["books"]:
+            _temp = i.split(":")
+            self.books[str(_temp[0])]= _temp[1]
+
         filename2 = raw_input("Enter filename for issuers dictionary of format \"name\":[book1,book2,...] default filename is issuers.json...")
         if filename2 == None :
             filename2 = 'issuers.json'
