@@ -9,6 +9,7 @@ def load_config(__file):		#Loads the data and
             __local_config = json.load(f)
     except Exception as e:		#Catches exceptions too!
         print (e)
+        quit()
     return __local_config
 
 def save_config(__obj, __file):		#Writes __obj to __file
@@ -44,18 +45,10 @@ class Library():					#The main class
         if filename1 == '' :
             filename1 = 'books.json'
         self.books = load_config(filename1)
-        if self.books == False:
-            print "No books present in config! This is an error..."
-            sleep(0.5)
-            quit()
         filename2 = raw_input("Enter filename for issuers dictionary of format \"name\":[book1,book2,...] default filename is issuers.json...")
         if filename2 == None :
             filename2 = 'issuers.json'
         self.issuers = load_config(filename2)
-        if self.issuers == False:
-            print "No issuers present in config! This is an error..."
-            sleep(0.5)
-            quit()
         for i in self.issuers.values:
             self.booksissued.append(i)
         print "Issued books list generated successfully..."
